@@ -1,5 +1,6 @@
 # 安裝環境
-**環境需求**\n
+**環境需求**  
+
 推薦使用Google Colab（因為需要大量計算資源）
 Python 3.x
 **安裝步驟**
@@ -12,7 +13,6 @@ Python 3.x
 !pip install datasets
 掛載Google Drive:
 為了存取Google Drive中的數據文件，執行以下代碼：
-
 from google.colab import drive
 drive.mount('/content/drive')
 
