@@ -3,6 +3,7 @@
 
 推薦使用Google Colab（因為需要大量計算資源）
 Python 3.x
+
 **安裝步驟**
 
 設置Python環境:
