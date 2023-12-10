@@ -1,15 +1,12 @@
 # 安裝環境
 環境需求
 Python 3.x
-Google Colab（推薦，因為需要大量計算資源）
+使用Google Colab（推薦，因為需要大量計算資源）
 安裝步驟
 設置Python環境:
 確保您的系統中安裝了Python 3.x。
 
-使用Google Colab:
-打開Google Colab，並將您的腳本上傳至Colab。
-
-安裝依賴項:
+# 安裝依賴項
 在Colab筆記本中運行以下命令安裝所需的庫。
 
 bash
