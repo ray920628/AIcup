@@ -74,6 +74,6 @@ with open(file_path1, 'w', encoding='utf-8') as file:
     file.writelines(filtered_lines)
 ```
 
-## License
+## 聯繫方式
 
-[MIT](https://choosealicense.com/licenses/mit/)
+如有任何問題，請通過以下郵件地址與我們聯繫：[ray20030628@gmail.com](ray20030628@gmail.com)。
