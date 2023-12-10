@@ -1,25 +1,21 @@
 # 安裝環境
-環境需求
+## 環境需求
+推薦使用Google Colab（因為需要大量計算資源）
 Python 3.x
-使用Google Colab（推薦，因為需要大量計算資源）
-安裝步驟
+## 安裝步驟
 設置Python環境:
 確保您的系統中安裝了Python 3.x。
 
 # 安裝依賴項
 在Colab筆記本中運行以下命令安裝所需的庫。
-
-bash
-Copy code
 !pip install transformers
 !pip install datasets
 掛載Google Drive:
 為了存取Google Drive中的數據文件，執行以下代碼：
 
-python
-Copy code
 from google.colab import drive
 drive.mount('/content/drive')
+
 配置模型和數據加載器:
 根據您的代碼，進行模型和數據加載器的配置。
 
