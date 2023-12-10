@@ -76,4 +76,4 @@ with open(file_path1, 'w', encoding='utf-8') as file:
 
 ## 聯繫方式
 
-如有任何問題，請通過以下郵件地址與我們聯繫：[ray20030628@gmail.com](https://mail.google.com/mail/u/0/#inbox)。
+如有任何問題，請通過以下郵件地址與我們聯繫：[ray20030628@gmail.com](mailto:ray20030628@gmail.com)。
