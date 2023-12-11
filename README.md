@@ -39,6 +39,28 @@ tokenizer = AutoTokenizer.from_pretrained(plm, revision="step3000")
 num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
 tokenizer.padding_side = 'left'
 ```
+## 模型預測
+主要用於測試訓練好的模型，測試它在給定的seed text基礎上生成文本。這個過程可以幫助評估模型的表現。
+```python
+def sample_text(model, tokenizer, seed, n_words=20):
+    model = model.to(device)
+    model.eval()
+    text = tokenizer.encode(seed)
+    inputs, past_key_values = torch.tensor([text]), None
+    with torch.no_grad():
+        for _ in tqdm(range(n_words)):
+            out = model(inputs.to(device), past_key_values=past_key_values)
+            logits = out.logits
+            past_key_values = out.past_key_values
+            log_probs = F.softmax(logits[:, -1], dim=-1)
+            inputs = torch.multinomial(log_probs, 1)
+            text.append(inputs.item())
+            if tokenizer.decode(inputs.item()) == eos:
+                break
+    return tokenizer.decode(text)
+
+sample_text(model, tokenizer, seed=f"{bos} D.O.B:  28/6/2003 {sep}")
+```
 
 ## 資料後處理
 主要防止模型產生額外的標籤，並進行刪除，此方法能夠提高分數，可以依照個人需求進行更改。
