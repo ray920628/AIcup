@@ -27,7 +27,7 @@
 ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-plm = "EleutherAI/pythia-410m-deduped"
+plm = "EleutherAI/pythia-410m-deduped" #此處可以修改你想要的模型
 bos = '<|endoftext|>'
 eos = '<|END|>'
 pad = '<|pad|>'
